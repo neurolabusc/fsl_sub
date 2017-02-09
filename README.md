@@ -8,8 +8,10 @@ FSL is a popular tool for brain imaging. If you set it up on your laptop or desk
 
 30-August-2016
  - do not run "GPU" code in parallel
+
 15-May-2015
  - Not all versions of sh support "declare"
+
 3-March-2015
  - Initial version
 
