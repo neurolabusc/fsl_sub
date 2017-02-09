@@ -37,6 +37,3 @@ After installation the code will automatically accelerate parallel processes. Ho
 ##### License
 
 This software uses the FMRIB Software Library license, which is embedded in the source code.
-
-
-# fsl_sub
