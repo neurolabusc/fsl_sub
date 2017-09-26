@@ -1,4 +1,6 @@
-#!/bin/sh
+#! /bin/bash
+#see https://github.com/neurolabusc/fsl_sub/issues/1
+# !/bin/sh
 
 # Copyright (C) 2007-2014 University of Oxford
 # Authors: Dave Flitney, Stephen Smith, Matthew Webster and Duncan Mortimer

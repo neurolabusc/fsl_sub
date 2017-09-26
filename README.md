@@ -6,6 +6,9 @@ FSL is a popular tool for brain imaging. If you set it up on your laptop or desk
 
 ##### Recent Versions
 
+7-May-2017
+ - [Explicitly use BASH shell](https://github.com/neurolabusc/fsl_sub/issues/1), which is not default for Debian. Note: if you use FSL it is probably a good idea to set BASH as your default shell, as several FSL scripts will fail with other shells (e.g. DASH).
+
 30-August-2016
  - do not run "GPU" code in parallel
 
