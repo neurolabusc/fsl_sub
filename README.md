@@ -6,6 +6,9 @@ FSL is a popular tool for brain imaging. If you set it up on your laptop or desk
 
 ##### Recent Versions
 
+29-Jan-2017
+ - Example dataset included.
+
 7-May-2017
  - [Explicitly use BASH shell](https://github.com/neurolabusc/fsl_sub/issues/1), which is not default for Debian. Note: if you use FSL it is probably a good idea to set BASH as your default shell, as several FSL scripts will fail with other shells (e.g. DASH).
 
@@ -29,7 +32,11 @@ sudo cp ~/Downloads/fsl_sub/fsl_sub fsl_sub
 sudo chmod +x fsl_sub
 ```
 
-##### Installation and testing
+##### Installation
+
+Replace the copy of `fsl_sub` that came with FSL with the version included here. To find the location of the original fsl_sub type `which fsl_sub` from the command line. You will want to make sure that the version of fsl_sub is executable (sudo chmod +x fsl_sub).
+
+##### Tuning
 
 After installation the code will automatically accelerate parallel processes. However, you can also control its behavior:
 
@@ -38,6 +45,9 @@ After installation the code will automatically accelerate parallel processes. Ho
 3. If you want to test the benefit, you can temporarily force it to automatically detect the number of cores (the default behavior) with the command “FSLPARALLEL=1; export FSLPARALLEL”
 4. To make permanent changes, add the desired FSLPARALLEL setting to your profile.
 
+##### Testing
+
+If you want to test the effectiveness of parallel processing on your computer, un-compress the folder "bedpostTest.zip" and run the shell script "runme_quick.sh" - this will [FSL's Bedpost](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FDT/UserGuide) twice: once with parallel processing off and once with it on.
 
 ##### License
 
