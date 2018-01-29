@@ -21,7 +21,7 @@ FSL is a popular tool for brain imaging. If you set it up on your laptop or desk
 3-March-2015
  - Initial version
 
-##### Installation and Compiling
+##### Installation
 
 Replace your previous version of fsl_sub with this code. Tasks will automatically run in parallel. SGE will take precedence over this code, so if you ever upgrade to a SGE cluster you do not have to modify this function
 
@@ -45,9 +45,20 @@ After installation the code will automatically accelerate parallel processes. Ho
 3. If you want to test the benefit, you can temporarily force it to automatically detect the number of cores (the default behavior) with the command “FSLPARALLEL=1; export FSLPARALLEL”
 4. To make permanent changes, add the desired FSLPARALLEL setting to your profile.
 
-##### Testing
+##### Test Dataset
 
-If you want to test the effectiveness of parallel processing on your computer, un-compress the folder "bedpostTest.zip" and run the shell script "runme_quick.sh" - this will [FSL's Bedpost](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FDT/UserGuide) twice: once with parallel processing off and once with it on.
+If you want to test the effectiveness of parallel processing on your computer, un-compress the folder "bedpostTest.zip" and run the shell script "runme_quick.sh" - this will [FSL's Bedpost](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FDT/UserGuide) twice: once with parallel processing off and once with it on. Notice that FSLPARALLEL will accelerate any FSL program that is designed to use SunGridEngine to go run CPU tasks in parallel. Note that in the specific case of bedpost, serious users will want want to use the GPU-based [bedpostx_gpu](https://users.fmrib.ox.ac.uk/~moisesf/Bedpostx_GPU/) instead of the CPU-based bedpostx (e.g. the included script runme_gpu.sh). Also, the sample dataset only includes an MRI scan with six low-resolution slices (with little benefit from more than six threads), while real world datasets include dozens of high-resolution slices. The purpose of this test dataset is simply to test the installation of the parallel fsl_sub.
+
+```
+./runme_quick.sh
+fsl_sub running  with parallel processing disabled
+...
+real	19m59.990s
+...
+fsl_sub running  with parallel processing enabled
+...
+real	8m54.404s
+```
 
 ##### License
 
