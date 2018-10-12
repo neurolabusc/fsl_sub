@@ -30,7 +30,7 @@ Replace your previous version of fsl_sub with this code. Tasks will automaticall
 cd $FSLDIR/bin
 cp fsl_sub fsl_sub_orig
 sudo cp ~/Downloads/fsl_sub/fsl_sub fsl_sub
-sudo chmod +x fsl_sub
+sudo chmod o+rx fsl_sub
 ```
 
 ##### Installation
