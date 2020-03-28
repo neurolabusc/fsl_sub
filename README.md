@@ -7,6 +7,9 @@ FSL is a popular tool for brain imaging. If you set it up on your laptop or desk
 
 ##### Recent Versions
 
+28-March-2020
+ - Updated to correspond with FSL 6.0.3.
+
 29-Jan-2017
  - Example dataset included.
 
